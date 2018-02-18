@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1D102B454BA6CCF21C3EC7C6 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401460736221BD286DE965EC /* Pods_MarvelTests.framework */; };
-		56D66997203A1FAF00610EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D66996203A1FAF00610EDB /* AppDelegate.swift */; };
 		56D66999203A1FAF00610EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D66998203A1FAF00610EDB /* ViewController.swift */; };
 		56D6699C203A1FAF00610EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D6699A203A1FAF00610EDB /* Main.storyboard */; };
-		56D6699E203A1FAF00610EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D6699D203A1FAF00610EDB /* Assets.xcassets */; };
-		56D669A1203A1FAF00610EDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D6699F203A1FAF00610EDB /* LaunchScreen.storyboard */; };
 		56D669AC203A1FAF00610EDB /* MarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D669AB203A1FAF00610EDB /* MarvelTests.swift */; };
 		6006C15A24283875FAA71BA4 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BAD4D374CF9C9B09441D6B /* Pods_Marvel.framework */; };
+		818CC1D64524D4360303425B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818CC890C5341FF66EB278F2 /* Assets.xcassets */; };
+		818CC5CCEF18A9275DAE78D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CCB94E20C09CB94CC5C8F /* AppDelegate.swift */; };
+		818CCFEEBA93233DC5D6BEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818CC68D7DD38293E8F82585 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,17 +31,17 @@
 		241C3A02C4F9A16E8F3AC4ED /* Pods-Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel/Pods-Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		401460736221BD286DE965EC /* Pods_MarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D66993203A1FAF00610EDB /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56D66996203A1FAF00610EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D66998203A1FAF00610EDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56D6699B203A1FAF00610EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		56D6699D203A1FAF00610EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		56D669A0203A1FAF00610EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		56D669A2203A1FAF00610EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D669A7203A1FAF00610EDB /* MarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D669AB203A1FAF00610EDB /* MarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTests.swift; sourceTree = "<group>"; };
 		56D669AD203A1FAF00610EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ADAACE681CD602A995F9BC2 /* Pods-Marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel/Pods-Marvel.debug.xcconfig"; sourceTree = "<group>"; };
 		76BAD4D374CF9C9B09441D6B /* Pods_Marvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		818CC60C25F9C6F634E2EE9D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		818CC890C5341FF66EB278F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		818CC9F2662899A5C7A0EFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Marvel/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		818CCB94E20C09CB94CC5C8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF786B7ADFFBB8C2338653D8 /* Pods-MarvelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelTests/Pods-MarvelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBE131D20E78A733CFFF92F6 /* Pods-MarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelTests/Pods-MarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,12 +89,11 @@
 		56D66995203A1FAF00610EDB /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				56D66996203A1FAF00610EDB /* AppDelegate.swift */,
+				56D82E45203A262E00A9A32C /* Classes */,
+				56D82E46203A264500A9A32C /* Resources */,
+				56D82E47203A264F00A9A32C /* Supporting Files */,
 				56D66998203A1FAF00610EDB /* ViewController.swift */,
 				56D6699A203A1FAF00610EDB /* Main.storyboard */,
-				56D6699D203A1FAF00610EDB /* Assets.xcassets */,
-				56D6699F203A1FAF00610EDB /* LaunchScreen.storyboard */,
-				56D669A2203A1FAF00610EDB /* Info.plist */,
 			);
 			path = Marvel;
 			sourceTree = "<group>";
@@ -106,6 +105,71 @@
 				56D669AD203A1FAF00610EDB /* Info.plist */,
 			);
 			path = MarvelTests;
+			sourceTree = "<group>";
+		};
+		56D82E45203A262E00A9A32C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				818CC6239C0FE0E44276593F /* Application */,
+				818CCF14361D6229870A7073 /* API */,
+				818CC2F7923682464D2FEBCE /* Common */,
+				818CC1857C22AC627E3B86E6 /* Data */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		56D82E46203A264500A9A32C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				818CC7793E84DFAD29007869 /* StubbedResponses */,
+				818CC890C5341FF66EB278F2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		56D82E47203A264F00A9A32C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				818CC60C25F9C6F634E2EE9D /* Info.plist */,
+				818CC68D7DD38293E8F82585 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		818CC1857C22AC627E3B86E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		818CC2F7923682464D2FEBCE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		818CC6239C0FE0E44276593F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				818CCB94E20C09CB94CC5C8F /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		818CC7793E84DFAD29007869 /* StubbedResponses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StubbedResponses;
+			sourceTree = "<group>";
+		};
+		818CCF14361D6229870A7073 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C3AB5F0C55CD9E8493582DE3 /* Pods */ = {
@@ -217,9 +281,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D669A1203A1FAF00610EDB /* LaunchScreen.storyboard in Resources */,
-				56D6699E203A1FAF00610EDB /* Assets.xcassets in Resources */,
 				56D6699C203A1FAF00610EDB /* Main.storyboard in Resources */,
+				818CC1D64524D4360303425B /* Assets.xcassets in Resources */,
+				818CCFEEBA93233DC5D6BEF0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D66999203A1FAF00610EDB /* ViewController.swift in Sources */,
-				56D66997203A1FAF00610EDB /* AppDelegate.swift in Sources */,
+				818CC5CCEF18A9275DAE78D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +456,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		56D6699F203A1FAF00610EDB /* LaunchScreen.storyboard */ = {
+		818CC68D7DD38293E8F82585 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				56D669A0203A1FAF00610EDB /* Base */,
+				818CC9F2662899A5C7A0EFC7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -516,7 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = "Marvel/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.Marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = "Marvel/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.Marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
