@@ -17,6 +17,15 @@
 		56D82E59203A2FC300A9A32C /* MarvelAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E58203A2FC300A9A32C /* MarvelAPIRouter.swift */; };
 		56D82E5C203A32D700A9A32C /* CredentialsProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E5B203A32D700A9A32C /* CredentialsProviderSpec.swift */; };
 		56D82E5E203A32E600A9A32C /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E5D203A32E600A9A32C /* GeneratedMocks.swift */; };
+		56D82E61203A361100A9A32C /* MarvelAPIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E60203A361100A9A32C /* MarvelAPIRequestManager.swift */; };
+		56D82E63203A365D00A9A32C /* MarvelApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E62203A365D00A9A32C /* MarvelApiService.swift */; };
+		56D82E67203A36F800A9A32C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E66203A36F800A9A32C /* Character.swift */; };
+		56D82E69203A370700A9A32C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E68203A370700A9A32C /* Page.swift */; };
+		56D82E6C203A3DF900A9A32C /* LoggerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E6B203A3DF900A9A32C /* LoggerFormatter.swift */; };
+		56D82E71203B3A8C00A9A32C /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E70203B3A8C00A9A32C /* Batch.swift */; };
+		56D82E73203B58A800A9A32C /* DatabaseMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E72203B58A800A9A32C /* DatabaseMigrationManager.swift */; };
+		56D82E77203B591F00A9A32C /* EntitiesDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E76203B591F00A9A32C /* EntitiesDatabaseManager.swift */; };
+		56D82E79203B5F4F00A9A32C /* CharacterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E78203B5F4F00A9A32C /* CharacterManager.swift */; };
 		6006C15A24283875FAA71BA4 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BAD4D374CF9C9B09441D6B /* Pods_Marvel.framework */; };
 		818CC1D64524D4360303425B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818CC890C5341FF66EB278F2 /* Assets.xcassets */; };
 		818CC5CCEF18A9275DAE78D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CCB94E20C09CB94CC5C8F /* AppDelegate.swift */; };
@@ -49,6 +58,15 @@
 		56D82E58203A2FC300A9A32C /* MarvelAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIRouter.swift; sourceTree = "<group>"; };
 		56D82E5B203A32D700A9A32C /* CredentialsProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsProviderSpec.swift; sourceTree = "<group>"; };
 		56D82E5D203A32E600A9A32C /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		56D82E60203A361100A9A32C /* MarvelAPIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIRequestManager.swift; sourceTree = "<group>"; };
+		56D82E62203A365D00A9A32C /* MarvelApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiService.swift; sourceTree = "<group>"; };
+		56D82E66203A36F800A9A32C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		56D82E68203A370700A9A32C /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		56D82E6B203A3DF900A9A32C /* LoggerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerFormatter.swift; sourceTree = "<group>"; };
+		56D82E70203B3A8C00A9A32C /* Batch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
+		56D82E72203B58A800A9A32C /* DatabaseMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMigrationManager.swift; sourceTree = "<group>"; };
+		56D82E76203B591F00A9A32C /* EntitiesDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDatabaseManager.swift; sourceTree = "<group>"; };
+		56D82E78203B5F4F00A9A32C /* CharacterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterManager.swift; sourceTree = "<group>"; };
 		5ADAACE681CD602A995F9BC2 /* Pods-Marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel/Pods-Marvel.debug.xcconfig"; sourceTree = "<group>"; };
 		76BAD4D374CF9C9B09441D6B /* Pods_Marvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		818CC60C25F9C6F634E2EE9D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +144,7 @@
 			children = (
 				818CC6239C0FE0E44276593F /* Application */,
 				818CCF14361D6229870A7073 /* API */,
+				56D82E74203B58FA00A9A32C /* BusinessLogic */,
 				818CC2F7923682464D2FEBCE /* Common */,
 				818CC1857C22AC627E3B86E6 /* Data */,
 			);
@@ -171,7 +190,9 @@
 		56D82E57203A2FB700A9A32C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				56D82E60203A361100A9A32C /* MarvelAPIRequestManager.swift */,
 				56D82E58203A2FC300A9A32C /* MarvelAPIRouter.swift */,
+				56D82E62203A365D00A9A32C /* MarvelApiService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -184,9 +205,54 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		56D82E64203A36C000A9A32C /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				56D82E72203B58A800A9A32C /* DatabaseMigrationManager.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		56D82E65203A36D100A9A32C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				56D82E70203B3A8C00A9A32C /* Batch.swift */,
+				56D82E66203A36F800A9A32C /* Character.swift */,
+				56D82E68203A370700A9A32C /* Page.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		56D82E6A203A3DE600A9A32C /* LoggerFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				56D82E6B203A3DF900A9A32C /* LoggerFormatter.swift */,
+			);
+			path = LoggerFormatter;
+			sourceTree = "<group>";
+		};
+		56D82E74203B58FA00A9A32C /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				56D82E75203B590900A9A32C /* Managers */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		56D82E75203B590900A9A32C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				56D82E76203B591F00A9A32C /* EntitiesDatabaseManager.swift */,
+				56D82E78203B5F4F00A9A32C /* CharacterManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		818CC1857C22AC627E3B86E6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				56D82E65203A36D100A9A32C /* Entities */,
+				56D82E64203A36C000A9A32C /* DB */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -194,6 +260,7 @@
 		818CC2F7923682464D2FEBCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				56D82E6A203A3DE600A9A32C /* LoggerFormatter */,
 				56D82E4B203A29A400A9A32C /* DateProvider */,
 			);
 			path = Common;
@@ -492,11 +559,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D82E71203B3A8C00A9A32C /* Batch.swift in Sources */,
+				56D82E6C203A3DF900A9A32C /* LoggerFormatter.swift in Sources */,
+				56D82E63203A365D00A9A32C /* MarvelApiService.swift in Sources */,
 				56D66999203A1FAF00610EDB /* ViewController.swift in Sources */,
 				56D82E4A203A298200A9A32C /* CredentialsProvider.swift in Sources */,
 				56D82E56203A2AA600A9A32C /* Configurations.swift in Sources */,
+				56D82E77203B591F00A9A32C /* EntitiesDatabaseManager.swift in Sources */,
 				56D82E4D203A29B200A9A32C /* DateProvider.swift in Sources */,
 				56D82E54203A2A6D00A9A32C /* CredentialsKeys.swift in Sources */,
+				56D82E79203B5F4F00A9A32C /* CharacterManager.swift in Sources */,
+				56D82E69203A370700A9A32C /* Page.swift in Sources */,
+				56D82E61203A361100A9A32C /* MarvelAPIRequestManager.swift in Sources */,
+				56D82E67203A36F800A9A32C /* Character.swift in Sources */,
+				56D82E73203B58A800A9A32C /* DatabaseMigrationManager.swift in Sources */,
 				56D82E59203A2FC300A9A32C /* MarvelAPIRouter.swift in Sources */,
 				818CC5CCEF18A9275DAE78D4 /* AppDelegate.swift in Sources */,
 			);

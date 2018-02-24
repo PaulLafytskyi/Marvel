@@ -12,14 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        fireRequest()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func fireRequest (){
+        CharacterManagerFactory.manager().downloadCharacters(page: Page(), success: { (chars) in
+            print(chars)
+        }) { (error) in
+            print(error)
+        }
     }
-
 
 }
 

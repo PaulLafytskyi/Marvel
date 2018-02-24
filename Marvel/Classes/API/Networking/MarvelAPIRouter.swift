@@ -20,7 +20,7 @@ extension MarvelAPIRouter: TargetType {
     }
 
     var path: String {
-        return "/v1/public/characters/"
+        return "/v1/public/characters"
     }
 
     var method: Moya.Method {
@@ -32,7 +32,7 @@ extension MarvelAPIRouter: TargetType {
     }
 
     var task: Task {
-        return.requestParameters(parameters:credentials, encoding: URLEncoding.default)
+        return.requestParameters(parameters:credentials, encoding: URLEncoding.queryString)
     }
 
     var credentials: [String: Any] {
@@ -40,7 +40,6 @@ extension MarvelAPIRouter: TargetType {
     }
 
     var headers: [String : String]? {
-        return nil
+        return ["Content-Type": "application/json"]
     }
 }
-
