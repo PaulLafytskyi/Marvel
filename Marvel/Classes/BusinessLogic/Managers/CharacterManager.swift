@@ -8,16 +8,16 @@
 
 import Foundation
 
-typealias SuccesCharactersCompleationBlock = ([Character]) -> Void
-typealias ErrorCompleationBlock = (Error) -> Void
+typealias SuccessCharactersCompletionBlock = ([Character]) -> Void
+typealias ErrorCompletionBlock = (Error) -> Void
 
 protocol CharacterManager {
     var requestManager: MarvelApiRequestManager { get }
     var entitiesManager: EntitiesDatabaseManager <Character> { get }
-    func downloadCharacters(page: Page, success: @escaping SuccesCharactersCompleationBlock, failure: ErrorCompleationBlock)
+    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)
 }
 
-struct CharacterManagerImplemantation: CharacterManager {
+struct CharacterManagerImplementation: CharacterManager {
     var requestManager: MarvelApiRequestManager
     var entitiesManager: EntitiesDatabaseManager<Character>
 
@@ -27,8 +27,8 @@ struct CharacterManagerImplemantation: CharacterManager {
         self.entitiesManager = entitiesManager
     }
 
-    func downloadCharacters(page: Page, success: @escaping SuccesCharactersCompleationBlock, failure: ErrorCompleationBlock)  {
-        self.requestManager.getCharacters(page: page, succes: { (characters) in
+    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)  {
+        self.requestManager.getCharacters(page: page, success: { (characters) in
             self.entitiesManager.saveEntities(entities: characters)
             success(characters)
         }) { (error) in
@@ -39,6 +39,6 @@ struct CharacterManagerImplemantation: CharacterManager {
 
 class CharacterManagerFactory {
     static func manager() -> CharacterManager {
-        return CharacterManagerImplemantation(requestManager: MarvelApiRequestManagerFactory.defaultMarvelApiRequestManager(), entitiesManager: EntitiesDatabaseManagerFactory.defaultManager())
+        return CharacterManagerImplementation(requestManager: MarvelApiRequestManagerFactory.defaultMarvelApiRequestManager(), entitiesManager: EntitiesDatabaseManagerFactory.defaultManager())
     }
 }

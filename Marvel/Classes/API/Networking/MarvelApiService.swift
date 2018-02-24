@@ -17,7 +17,7 @@ typealias FailureCallback = (_ fail: Error) -> Void
 
 protocol MarvelApiService {
     var apiProvider: MoyaProvider <MarvelAPIRouter> { get }
-    func request(router: MarvelAPIRouter, succes: @escaping SuccessCallback, failure: @escaping FailureCallback)
+    func request(router: MarvelAPIRouter, success: @escaping SuccessCallback, failure: @escaping FailureCallback)
 }
 
 // MARK:- Implementation
@@ -29,7 +29,7 @@ class MarvelApiServiceImplementation: MarvelApiService {
         self.apiProvider = MoyaProvider<MarvelAPIRouter>(plugins: [NetworkLoggerPlugin(verbose: verbose, responseDataFormatter: JSONResponseDataFormatter)])
     }
 
-    func request(router: MarvelAPIRouter, succes: @escaping SuccessCallback, failure: @escaping FailureCallback) {
+    func request(router: MarvelAPIRouter, success succes: @escaping SuccessCallback, failure: @escaping FailureCallback) {
         apiProvider.request(router) { (result) in
             switch result {
             case .success(let response):

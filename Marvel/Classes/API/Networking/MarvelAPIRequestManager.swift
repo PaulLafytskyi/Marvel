@@ -13,7 +13,7 @@ import ObjectMapper
 
 protocol MarvelApiRequestManager {
     var apiService: MarvelApiService { get }
-    func getCharacters(page: Page, succes: @escaping SuccesCharactersCompleationBlock, failure: @escaping ErrorCompleationBlock)
+    func getCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock)
 }
 
 
@@ -24,8 +24,8 @@ class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
         self.apiService = apiService
     }
 
-    func getCharacters(page: Page, succes: @escaping SuccesCharactersCompleationBlock, failure: @escaping ErrorCompleationBlock) {
-        self.apiService.request(router: .characters(offset: 0, limit: 20), succes: { (response) in
+    func getCharacters(page: Page, success succes: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock) {
+        self.apiService.request(router: .characters(offset: 0, limit: 20), success: { (response) in
             if let json = try? response.mapJSON() as! [String: Any] {
                 //TODO: Remove force and generate custom error
                 let data = json["data"]as![String: Any]
