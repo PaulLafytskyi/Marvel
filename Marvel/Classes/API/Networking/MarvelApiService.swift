@@ -26,7 +26,12 @@ class MarvelApiServiceImplementation: MarvelApiService {
     var apiProvider: MoyaProvider <MarvelAPIRouter>
 
     init(stubbing: Bool, verbose: Bool) {
-        self.apiProvider = MoyaProvider<MarvelAPIRouter>(plugins: [NetworkLoggerPlugin(verbose: verbose, responseDataFormatter: JSONResponseDataFormatter)])
+        let stubClosure = { (target: TargetType) -> Moya.StubBehavior in
+            return .immediate
+        }
+        self.apiProvider = stubbing
+            ? MoyaProvider<MarvelAPIRouter>(stubClosure: stubClosure)
+            : MoyaProvider<MarvelAPIRouter>(plugins: [NetworkLoggerPlugin(verbose: verbose, responseDataFormatter: JSONResponseDataFormatter)])
     }
 
     func request(router: MarvelAPIRouter, success succes: @escaping SuccessCallback, failure: @escaping FailureCallback) {

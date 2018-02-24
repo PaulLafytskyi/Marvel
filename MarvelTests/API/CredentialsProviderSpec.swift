@@ -18,7 +18,7 @@ class CredentialsProviderSpec: QuickSpec {
             var sut: CredentialsProvider!
             var dateProvider: MockConcreteProvider!
 
-            describe("when initialized", closure: {
+            describe("When initialized", closure: {
                 beforeEach {
                     dateProvider = MockConcreteProvider()
                     sut = CredentialsProvider(privateKey: "abcd", publicKey: "1234", dateProvider: dateProvider)
