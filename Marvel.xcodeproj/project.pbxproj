@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		1D102B454BA6CCF21C3EC7C6 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401460736221BD286DE965EC /* Pods_MarvelTests.framework */; };
 		561BD301204204E0005FF03E /* MarvelAPIRequestManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD300204204E0005FF03E /* MarvelAPIRequestManagerSpec.swift */; };
-		56D66999203A1FAF00610EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D66998203A1FAF00610EDB /* ViewController.swift */; };
-		56D6699C203A1FAF00610EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D6699A203A1FAF00610EDB /* Main.storyboard */; };
+		561BD30C20422082005FF03E /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD30B20422082005FF03E /* FeedModel.swift */; };
+		561BD30E20422090005FF03E /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD30D20422090005FF03E /* FeedView.swift */; };
+		561BD31020422098005FF03E /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD30F20422098005FF03E /* FeedPresenter.swift */; };
+		561BD312204222EF005FF03E /* FeedSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD311204222EF005FF03E /* FeedSceneFactory.swift */; };
+		561BD31820422ED0005FF03E /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD31620422ED0005FF03E /* FeedTableViewCell.swift */; };
+		561BD31920422ED0005FF03E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561BD31720422ED0005FF03E /* FeedTableViewCell.xib */; };
+		561BD31C204230C7005FF03E /* CellInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BD31B204230C7005FF03E /* CellInitializable.swift */; };
 		56D82E4A203A298200A9A32C /* CredentialsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E49203A298200A9A32C /* CredentialsProvider.swift */; };
 		56D82E4D203A29B200A9A32C /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E4C203A29B200A9A32C /* DateProvider.swift */; };
 		56D82E54203A2A6D00A9A32C /* CredentialsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82E53203A2A6D00A9A32C /* CredentialsKeys.swift */; };
@@ -48,9 +53,14 @@
 		241C3A02C4F9A16E8F3AC4ED /* Pods-Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel/Pods-Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		401460736221BD286DE965EC /* Pods_MarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561BD300204204E0005FF03E /* MarvelAPIRequestManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIRequestManagerSpec.swift; sourceTree = "<group>"; };
+		561BD30B20422082005FF03E /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		561BD30D20422090005FF03E /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		561BD30F20422098005FF03E /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		561BD311204222EF005FF03E /* FeedSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSceneFactory.swift; sourceTree = "<group>"; };
+		561BD31620422ED0005FF03E /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		561BD31720422ED0005FF03E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		561BD31B204230C7005FF03E /* CellInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInitializable.swift; sourceTree = "<group>"; };
 		56D66993203A1FAF00610EDB /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56D66998203A1FAF00610EDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		56D6699B203A1FAF00610EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56D669A7203A1FAF00610EDB /* MarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D669AD203A1FAF00610EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D82E49203A298200A9A32C /* CredentialsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsProvider.swift; sourceTree = "<group>"; };
@@ -101,6 +111,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561BD30820422037005FF03E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				561BD3092042204D005FF03E /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		561BD3092042204D005FF03E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				561BD30A20422067005FF03E /* FeedScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		561BD30A20422067005FF03E /* FeedScene */ = {
+			isa = PBXGroup;
+			children = (
+				561BD31320422CE4005FF03E /* Cells */,
+				561BD30B20422082005FF03E /* FeedModel.swift */,
+				561BD30D20422090005FF03E /* FeedView.swift */,
+				561BD30F20422098005FF03E /* FeedPresenter.swift */,
+				561BD311204222EF005FF03E /* FeedSceneFactory.swift */,
+			);
+			path = FeedScene;
+			sourceTree = "<group>";
+		};
+		561BD31320422CE4005FF03E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				561BD31620422ED0005FF03E /* FeedTableViewCell.swift */,
+				561BD31720422ED0005FF03E /* FeedTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		561BD31A204230B6005FF03E /* TableViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				561BD31B204230C7005FF03E /* CellInitializable.swift */,
+			);
+			path = TableViewHelper;
+			sourceTree = "<group>";
+		};
 		56D6698A203A1FAF00610EDB = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +182,6 @@
 				56D82E45203A262E00A9A32C /* Classes */,
 				56D82E46203A264500A9A32C /* Resources */,
 				56D82E47203A264F00A9A32C /* Supporting Files */,
-				56D66998203A1FAF00610EDB /* ViewController.swift */,
-				56D6699A203A1FAF00610EDB /* Main.storyboard */,
 			);
 			path = Marvel;
 			sourceTree = "<group>";
@@ -151,6 +204,7 @@
 				56D82E74203B58FA00A9A32C /* BusinessLogic */,
 				818CC2F7923682464D2FEBCE /* Common */,
 				818CC1857C22AC627E3B86E6 /* Data */,
+				561BD30820422037005FF03E /* Presentation */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -265,6 +319,7 @@
 		818CC2F7923682464D2FEBCE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				561BD31A204230B6005FF03E /* TableViewHelper */,
 				56D82E6A203A3DE600A9A32C /* LoggerFormatter */,
 				56D82E4B203A29A400A9A32C /* DateProvider */,
 			);
@@ -409,8 +464,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D6699C203A1FAF00610EDB /* Main.storyboard in Resources */,
 				818CC1D64524D4360303425B /* Assets.xcassets in Resources */,
+				561BD31920422ED0005FF03E /* FeedTableViewCell.xib in Resources */,
 				818CCFEEBA93233DC5D6BEF0 /* LaunchScreen.storyboard in Resources */,
 				818CCEF5F7472A5CABBE30CE /* Characters.json in Resources */,
 			);
@@ -467,6 +522,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Marvel/Pods-Marvel-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
@@ -474,10 +530,12 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
@@ -485,6 +543,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,7 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"${SRCROOT}/MarvelTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${SRCROOT}/Marvel\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n${PODS_ROOT}/Cuckoo/run generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Classes/Common/DateProvider/DateProvider.swift\"\n";
+			shellScript = "OUTPUT_FILE=\"${SRCROOT}/MarvelTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${SRCROOT}/Marvel\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n${PODS_ROOT}/Cuckoo/run generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Classes/Common/DateProvider/DateProvider.swift\" ";
 		};
 		C5E6C2A0913FE98D3E3E7F91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -567,21 +626,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D82E71203B3A8C00A9A32C /* Batch.swift in Sources */,
+				561BD31C204230C7005FF03E /* CellInitializable.swift in Sources */,
 				56D82E6C203A3DF900A9A32C /* LoggerFormatter.swift in Sources */,
+				561BD30C20422082005FF03E /* FeedModel.swift in Sources */,
 				56D82E63203A365D00A9A32C /* MarvelApiService.swift in Sources */,
-				56D66999203A1FAF00610EDB /* ViewController.swift in Sources */,
 				56D82E4A203A298200A9A32C /* CredentialsProvider.swift in Sources */,
 				56D82E56203A2AA600A9A32C /* Configurations.swift in Sources */,
 				56D82E77203B591F00A9A32C /* EntitiesDatabaseManager.swift in Sources */,
 				56D82E4D203A29B200A9A32C /* DateProvider.swift in Sources */,
 				56D82E54203A2A6D00A9A32C /* CredentialsKeys.swift in Sources */,
+				561BD31820422ED0005FF03E /* FeedTableViewCell.swift in Sources */,
+				561BD30E20422090005FF03E /* FeedView.swift in Sources */,
 				56D82E79203B5F4F00A9A32C /* CharacterManager.swift in Sources */,
 				56D82E69203A370700A9A32C /* Page.swift in Sources */,
 				56D82E61203A361100A9A32C /* MarvelAPIRequestManager.swift in Sources */,
+				561BD31020422098005FF03E /* FeedPresenter.swift in Sources */,
 				56D82E67203A36F800A9A32C /* Character.swift in Sources */,
 				56D82E73203B58A800A9A32C /* DatabaseMigrationManager.swift in Sources */,
 				56D82E59203A2FC300A9A32C /* MarvelAPIRouter.swift in Sources */,
 				818CC5CCEF18A9275DAE78D4 /* AppDelegate.swift in Sources */,
+				561BD312204222EF005FF03E /* FeedSceneFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,14 +670,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		56D6699A203A1FAF00610EDB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56D6699B203A1FAF00610EDB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		818CC68D7DD38293E8F82585 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -7,6 +7,8 @@ target 'Marvel' do
     pod 'RealmSwift', '~> 3.1.1'
     pod 'ObjectMapper+Realm'
     pod 'ReachabilitySwift', '~> 4.1.0'
+    pod 'SnapKit', '~> 4.0'
+    pod 'Kingfisher', '~> 4.6.2'
 
     target 'MarvelTests' do
         inherit! :search_paths

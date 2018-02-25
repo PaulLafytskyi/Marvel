@@ -18,8 +18,13 @@ class Page: Mappable {
     var total: Int = 0
     var count: Int = 0
 
-    required convenience init?(map: Map) {
-        self.init()
+    required init?(map: Map) {
+
+    }
+
+    init(limit: Int, offset: Int) {
+        self.limit = limit
+        self.offset = offset
     }
 
     func mapping(map: Map) {

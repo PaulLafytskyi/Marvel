@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Marvel/Classes/Common/DateProvider/DateProvider.swift at 2018-02-18 22:19:05 +0000
+// MARK: - Mocks generated from file: Marvel/Classes/Common/DateProvider/DateProvider.swift at 2018-02-25 16:56:12 +0000
 
 //
 //  DateProvider.swift

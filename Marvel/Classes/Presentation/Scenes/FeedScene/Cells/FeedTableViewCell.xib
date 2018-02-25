@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5t-jS-PDa">
+                        <rect key="frame" x="20" y="20" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="6C2-Jd-tCG"/>
+                            <constraint firstAttribute="height" constant="50" id="K2S-1i-L0c"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-nv-aHW">
+                        <rect key="frame" x="80" y="20" width="240" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As2-bG-NcJ">
+                        <rect key="frame" x="78" y="49" width="222" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="sHD-ze-WhG"/>
+                        </constraints>
+                        <string key="text">Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but. Resembled at perpetual no believing is otherwise sportsman. Is do he dispatched cultivated travelling astonished. Melancholy am considered possession on collecting everything. </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PbX-nv-aHW" secondAttribute="trailing" id="44R-xq-p1A"/>
+                    <constraint firstItem="As2-bG-NcJ" firstAttribute="leading" secondItem="g5t-jS-PDa" secondAttribute="trailing" constant="8" id="5Vj-Fb-w3m"/>
+                    <constraint firstItem="PbX-nv-aHW" firstAttribute="leading" secondItem="g5t-jS-PDa" secondAttribute="trailing" constant="10" id="BPf-ys-Cqj"/>
+                    <constraint firstItem="PbX-nv-aHW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="S8X-V3-WKI"/>
+                    <constraint firstItem="As2-bG-NcJ" firstAttribute="top" secondItem="PbX-nv-aHW" secondAttribute="bottom" constant="10" id="dsD-HG-QVg"/>
+                    <constraint firstItem="g5t-jS-PDa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pfQ-rs-isr"/>
+                    <constraint firstAttribute="bottom" secondItem="As2-bG-NcJ" secondAttribute="bottom" constant="20" id="tcq-4d-ydC"/>
+                    <constraint firstAttribute="trailing" secondItem="As2-bG-NcJ" secondAttribute="trailing" constant="20" id="u5Y-Xn-HJh"/>
+                    <constraint firstItem="g5t-jS-PDa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="yvk-PU-kyJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="g5t-jS-PDa" id="WOl-eO-vrc"/>
+                <outlet property="descriptionLabel" destination="As2-bG-NcJ" id="t7h-Mv-mbU"/>
+                <outlet property="nameLabel" destination="PbX-nv-aHW" id="s9L-cV-3Qz"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="118"/>
+        </tableViewCell>
+    </objects>
+</document>
