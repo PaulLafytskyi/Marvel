@@ -13,7 +13,7 @@ import ObjectMapper_Realm
 
 class Character: Object, Mappable {
 
-    @objc dynamic var id: Int = 0
+    @objc dynamic var characterID: Int = 0
     @objc dynamic var name: String = ""
     @objc dynamic var descriptions: String?
 
@@ -22,8 +22,12 @@ class Character: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        id <- map["id"]
+        characterID <- map["id"]
         name <- map["name"]
         descriptions <- map["descriptions"]
+    }
+
+    override static func primaryKey() -> String? {
+        return "characterID"
     }
 }

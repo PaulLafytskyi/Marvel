@@ -19,8 +19,12 @@ class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidReady()
         setupTableView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewDidReady()
     }
 
     private func setupTableView () {
@@ -50,6 +54,7 @@ class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        presenter.loadMoreIfNeeded(index: indexPath.row)
         let cell: FeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier()) as! FeedTableViewCell
         let character = presenter.dataAtIndex(index: indexPath.row)
         cell.nameLabel.text = character?.name

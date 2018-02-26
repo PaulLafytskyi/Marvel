@@ -24,8 +24,31 @@ struct EntitiesDatabaseManager <T: Object> {
 
     func saveEntities(entities: [T]) {
         try! realm.write {
-            self.realm.add(entities)
+            self.realm.add(entities, update: true)
+            //self.realm.add(entities)
         }
+    }
+
+    func fetchSortedPagedEntities(by: String, page: Page) -> [T] {
+        let result = Array(realm.objects(T.self).sorted(by: [SortDescriptor(keyPath: by, ascending: true)]))
+        if (page.offset >= result.count) {
+            return [T]()
+        }
+        var pagedResult: [T] = [T]()
+
+        let from = page.offset
+        var to = page.offset + page.limit - 1
+        if (from >= result.count || result.count == 0) {
+            return pagedResult
+        }
+        if (result.count < from + to) {
+            to = result.count - 1
+        }
+
+        for index in from...to {
+            pagedResult.append(result[index])
+        }
+        return pagedResult;
     }
 
     func fetchAllEntities() -> [T] {

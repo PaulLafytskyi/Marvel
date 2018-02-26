@@ -8,13 +8,14 @@
 
 import Foundation
 
-typealias SuccessCharactersCompletionBlock = ([Character]) -> Void
+typealias SuccessCharactersCompletionBlock = (_ characters: [Character], _ page: Page?) -> Void
 typealias ErrorCompletionBlock = (Error) -> Void
 
 protocol CharacterManager {
     var requestManager: MarvelApiRequestManager { get }
     var entitiesManager: EntitiesDatabaseManager <Character> { get }
     func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)
+    func storedCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock) 
 }
 
 struct CharacterManagerImplementation: CharacterManager {
@@ -28,12 +29,16 @@ struct CharacterManagerImplementation: CharacterManager {
     }
 
     func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)  {
-        self.requestManager.getCharacters(page: page, success: { (characters) in
+        self.requestManager.getCharacters(page: page, success: { (characters, page) in
             self.entitiesManager.saveEntities(entities: characters)
-            success(characters)
+            success(characters , page)
         }) { (error) in
-            // TODO: Notify Error
+
         }
+    }
+
+    func storedCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock) {
+        success(self.entitiesManager.fetchSortedPagedEntities(by: "name", page: page), nil)
     }
 }
 

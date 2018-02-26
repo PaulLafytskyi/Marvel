@@ -25,19 +25,25 @@ class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
     }
 
     func getCharacters(page: Page, success succes: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock) {
-        self.apiService.request(router: .characters(offset: 0, limit: 20), success: { (response) in
+        self.apiService.request(router: .characters(offset: page.offset, limit: page.limit), success: { [weak self](response) in
             if let json = try? response.mapJSON() as! [String: Any] {
                 //TODO: Remove force and generate custom error
                 let data = json["data"]as![String: Any]
                 let results = data["results"]
                 let mapper = Mapper<Character>()
                 let chars = mapper.mapArray(JSONObject: results)
-                succes(chars!)
+                let page = self?.mapPage(data)
+                succes(chars!, page)
             }
 
         }) { (error) in
 
         }
+    }
+
+    private func mapPage(_ data: Any) -> Page? {
+        let mapper = Mapper<Page>()
+        return mapper.map(JSONObject: data)
     }
 }
 

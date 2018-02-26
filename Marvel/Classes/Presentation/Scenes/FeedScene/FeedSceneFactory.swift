@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import Reachability
 
 class FeedSceneFactory {
     static func defaultFeedScene() -> FeedViewController {
-        let model = FeedModel(charactersManager: CharacterManagerFactory.manager())
+        let model = FeedModel(charactersManager: CharacterManagerFactory.manager(), reachability: Reachability())
         let view = FeedViewController()
-        let presenter = FeedPresenter(model: model, view: view)
+        let presenter = FeedPresenter(model: model, view: view, pagingManager: PagingManager())
         view.presenter = presenter
         model.presenter = presenter
         return view

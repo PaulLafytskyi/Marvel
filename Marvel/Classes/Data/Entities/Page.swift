@@ -15,11 +15,11 @@ class Page: Mappable {
 
     var offset: Int = 0
     var limit: Int = 0
-    var total: Int = 0
-    var count: Int = 0
+    var count: Int {
+        return offset + limit
+    }
 
-    required init?(map: Map) {
-
+    init() {
     }
 
     init(limit: Int, offset: Int) {
@@ -27,10 +27,16 @@ class Page: Mappable {
         self.offset = offset
     }
 
+    required convenience init?(map: Map) {
+        self.init()
+    }
+
     func mapping(map: Map) {
         offset <- map["offset"]
         limit <- map["limit"]
-        total <- map["total"]
-        count <- map["count"]
+    }
+
+    func mutateToNext() {
+        self.offset += self.limit
     }
 }

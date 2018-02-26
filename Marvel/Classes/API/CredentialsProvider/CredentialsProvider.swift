@@ -32,6 +32,12 @@ class CredentialsProvider {
                 CredentialsKeys.timeStamp: timeStamp]
     }
 
+    func credentialsWithParams(keys: [String], values: [String]) -> [String: String] {
+        var params = credentials()
+        params.merge(zip(keys, values)) { (current, _) in current }
+        return params
+    }
+
     func testedCredentials() -> String {
         let timeStamp = dateProvider.currentDateInStringRepresentation()
         let hash = "\(timeStamp)\(privateKey)\(publicKey)".md5()

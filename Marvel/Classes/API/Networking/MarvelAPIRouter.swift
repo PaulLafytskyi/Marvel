@@ -36,7 +36,10 @@ extension MarvelAPIRouter: TargetType {
     }
 
     var credentials: [String: Any] {
-        return CredentialsProviderFactory.provider().credentials()
+        switch self {
+        case .characters(let offset, let limit):
+            return  CredentialsProviderFactory.provider().credentialsWithParams(keys: ["limit", "offset", "orderBy"], values: ["\(limit)", "\(offset)", "name"])
+        }
     }
 
     var headers: [String : String]? {
