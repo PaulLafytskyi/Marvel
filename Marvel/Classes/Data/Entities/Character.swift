@@ -15,7 +15,8 @@ class Character: Object, Mappable {
 
     @objc dynamic var characterID: Int = 0
     @objc dynamic var name: String = ""
-    @objc dynamic var descriptions: String?
+    @objc dynamic var descriptions: String = ""
+    @objc dynamic var thumbnail: Thumbnail?
 
     required convenience init?(map: Map) {
         self.init()
@@ -24,7 +25,8 @@ class Character: Object, Mappable {
     func mapping(map: Map) {
         characterID <- map["id"]
         name <- map["name"]
-        descriptions <- map["descriptions"]
+        descriptions <- map["description"]
+        thumbnail <- map ["thumbnail"]
     }
 
     override static func primaryKey() -> String? {

@@ -6,13 +6,14 @@
 //  Copyright © 2018 PLF. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol FeedViewPresenter {
     func viewDidReady()
     func loadMoreIfNeeded(index: Int)
     func numberOfRow() -> Int
     func dataAtIndex(index: Int) -> Character?
+    func placeholder() -> UIImage?
 }
 
 protocol FeedModelPresenter: AnyObject {
@@ -22,7 +23,6 @@ protocol FeedModelPresenter: AnyObject {
 }
 
 class FeedPresenter: FeedViewPresenter, FeedModelPresenter, PaginationDelegate {
-    var page = Page(limit: Pagination.limit, offset: 0)
     var isOnline = true
 
     //MARK: - Init
@@ -57,16 +57,24 @@ class FeedPresenter: FeedViewPresenter, FeedModelPresenter, PaginationDelegate {
         return list[index]
     }
 
+    func placeholder() -> UIImage? {
+        return UIImage(named: "placeholder")
+    }
+
     // MARK: - FeedModelPresenter
 
     func newDataAppear(data: [Character], page: Page?) {
         list.append(contentsOf: data)
         if let page = page  {
-            pagingManager.updateCurrentPage(page)
+            if data.count > 0 {
+                pagingManager.updateCurrentPage(page)
+            }
             pagingManager.enableLoading()
         }
         DispatchQueue.main.async {
-            self.view.makeUpdate()
+            if (data.count > 0) {
+                self.view.makeUpdate()
+            }
         }
     }
 

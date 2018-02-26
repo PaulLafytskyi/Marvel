@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 protocol FeedView: AnyObject {
     func makeUpdate()
@@ -58,6 +59,16 @@ class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITab
         let cell: FeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier()) as! FeedTableViewCell
         let character = presenter.dataAtIndex(index: indexPath.row)
         cell.nameLabel.text = character?.name
+        cell.descriptionLabel.text = character?.descriptions
+        guard let url = character?.thumbnail?.url else  {
+            return cell
+        }
+        cell.avatarImageView.kf.setImage(with:url , placeholder: presenter.placeholder(), options:  [.cacheSerializer(DefaultCacheSerializer.default)], progressBlock: nil, completionHandler: nil)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? FeedTableViewCell else { return }
+        cell.avatarImageView.kf.cancelDownloadTask()
     }
 }

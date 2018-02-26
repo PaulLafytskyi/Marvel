@@ -9,12 +9,14 @@
 import Nimble
 import Quick
 import Cuckoo
+import RealmSwift
 
 @testable import Marvel
 
 class MarvelAPIRequestManagerSpec: QuickSpec {
 
     override func spec() {
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = "database A"
 
         describe("MarvelAPIRequestManager", closure: {
             var sut: MarvelApiRequestManager!
@@ -29,7 +31,7 @@ class MarvelAPIRequestManagerSpec: QuickSpec {
                     it("Should return value", closure: {
                         var error: Error? = nil
                         waitUntil { done in
-                            sut.getCharacters(page: Page(), success: { success in
+                            sut.getCharacters(page: Page(), success: { success,page  in
                                 expect(success.count == 30).to(beTrue())
                                 done()
                             }, failure: { failure in

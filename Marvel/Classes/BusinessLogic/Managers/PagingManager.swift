@@ -17,7 +17,7 @@ protocol PaginationDelegate: AnyObject {
 }
 
 class PagingManager: NSObject {
-    var page: Page?
+    var page: Page = Page(limit: Pagination.limit, offset: 0)
     var shouldLoadMore = true
     weak var delegate: PaginationDelegate?
 
@@ -26,13 +26,9 @@ class PagingManager: NSObject {
     }
 
     func loadMoreIfNeeded(currentIndex: Int, itemsInRow: Int) {
-        guard let page = page else {
-            return
-        }
         if !shouldLoadMore {
             return
         }
-        print("currentIndex = \(currentIndex), itemsInRow\(itemsInRow)page,  limit\(page.limit), offset\(page.offset)")
 
         var indexToCompare = page.count - 1
 
