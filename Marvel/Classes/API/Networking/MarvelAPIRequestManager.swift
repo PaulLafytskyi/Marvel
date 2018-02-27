@@ -27,7 +27,10 @@ class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
         self.apiService.request(router: .characters(offset: page.offset, limit: page.limit), success: { [weak self](response) in
             if let json = try? response.mapJSON() as! [String: Any] {
                 //TODO: Remove force and generate custom error
-                let data = json["data"]as![String: Any]
+                guard let data = json["data"] as? [String: Any] else {
+                    failure(MarvelError.invalidResponse)
+                    return
+                }
                 let results = data["results"]
                 let mapper = Mapper<Character>()
                 let chars = mapper.mapArray(JSONObject: results)
