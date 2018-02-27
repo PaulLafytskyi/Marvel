@@ -14,22 +14,10 @@ class FeedTableViewCell: UITableViewCell, CellInitializable {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = ""
         avatarImageView.image = nil
         descriptionLabel.text = ""
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

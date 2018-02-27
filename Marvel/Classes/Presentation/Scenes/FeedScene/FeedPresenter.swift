@@ -79,6 +79,9 @@ class FeedPresenter: FeedViewPresenter, FeedModelPresenter, PaginationDelegate {
     }
 
     func failedToLoadData() {
+        DispatchQueue.main.async {
+            self.view.notifyAboutError(message: "Failed to load data!")
+        }
         pagingManager.enableLoading()
     }
 

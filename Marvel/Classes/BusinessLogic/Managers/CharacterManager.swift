@@ -14,7 +14,7 @@ typealias ErrorCompletionBlock = (Error) -> Void
 protocol CharacterManager {
     var requestManager: MarvelApiRequestManager { get }
     var entitiesManager: EntitiesDatabaseManager <Character> { get }
-    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)
+    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock)
     func storedCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock) 
 }
 
@@ -28,12 +28,12 @@ struct CharacterManagerImplementation: CharacterManager {
         self.entitiesManager = entitiesManager
     }
 
-    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: ErrorCompletionBlock)  {
+    func downloadCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock)  {
         self.requestManager.getCharacters(page: page, success: { (characters, page) in
             self.entitiesManager.saveEntities(entities: characters)
             success(characters , page)
         }) { (error) in
-
+            failure(error)
         }
     }
 

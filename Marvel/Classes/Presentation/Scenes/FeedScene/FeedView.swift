@@ -12,9 +12,13 @@ import Kingfisher
 
 protocol FeedView: AnyObject {
     func makeUpdate()
+    func notifyAboutError(message: String)
 }
 
 class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITableViewDataSource {
+
+    //MARK: - FeedViewController
+
     var presenter: FeedViewPresenter!
     let tableView = UITableView()
 
@@ -38,13 +42,19 @@ class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITab
         }
     }
 
+    //MARK: - FeedView
+
     func makeUpdate() {
         tableView.reloadData()
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func notifyAboutError(message: String){
+        let alert = UIAlertController(title: "Ooops!", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
+
+    //MARK: - UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRow()

@@ -37,6 +37,8 @@ class FeedModel {
         }
     }
 
+    //MARK: - Reachability
+
     func isReachable() -> Bool {
         return reachability?.connection == .none
     }

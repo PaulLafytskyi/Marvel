@@ -16,7 +16,6 @@ protocol MarvelApiRequestManager {
     func getCharacters(page: Page, success: @escaping SuccessCharactersCompletionBlock, failure: @escaping ErrorCompletionBlock)
 }
 
-
 class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
     var apiService: MarvelApiService
 
@@ -37,7 +36,7 @@ class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
             }
 
         }) { (error) in
-
+            failure(error)
         }
     }
 
@@ -47,11 +46,8 @@ class MarvelApiRequestManagerImplementation: MarvelApiRequestManager {
     }
 }
 
-
 class MarvelApiRequestManagerFactory {
     static func defaultMarvelApiRequestManager() -> MarvelApiRequestManager {
         return MarvelApiRequestManagerImplementation(apiService: MarvelAPIServiceFactory.defaultMarvelApiService())
     }
 }
-
-
