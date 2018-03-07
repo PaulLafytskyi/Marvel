@@ -40,6 +40,7 @@ class FeedViewController: UIViewController, FeedView, UITableViewDelegate, UITab
         tableView.snp.makeConstraints { (make) -> Void  in
             make.edges.equalTo(view)
         }
+        tableView.estimatedRowHeight = 100
     }
 
     //MARK: - FeedView
